@@ -9,6 +9,7 @@ upgrade
 # tap
 #-----
 tap phinze/homebrew-cask
+tap sanemat/font
 
 # brew
 #------
@@ -22,6 +23,7 @@ install ctags
 install curl
 install jq
 install vim
+install --vim-powerline ricty
 
 # brew cask
 #-----------
