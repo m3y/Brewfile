@@ -22,6 +22,8 @@ install tmux
 install ctags
 install curl
 install jq
+install gnu-sed
+install bash
 install vim
 install --vim-powerline ricty
 
@@ -45,5 +47,7 @@ cask install vagrant
 #cask install gimp
 #cask install inkscape
 
+
 # cleanup
+#---------
 cleanup
