@@ -4,5 +4,5 @@ Brewfile
 反映方法
 --------
 ```
-$ ./brew2sh Brewfile | sh
+$ ./brew2sh.py Brewfile | sh
 ```
