@@ -37,6 +37,7 @@ cask install google-chrome
 cask install google-japanese-ime
 cask install iterm2
 cask install skitch
+cask install xtrafinder
 cask install virtualbox
 cask install vagrant
 
