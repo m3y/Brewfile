@@ -18,11 +18,10 @@ def convert(line):
 
 
 if __name__ == '__main__':
-    file = sys.argv[1];
-    if not os.path.isfile(file):
+    if len(sys.argv) < 2 or not os.path.isfile(sys.argv[1]):
         usage()
 
-    with open(file) as f:
+    with open(sys.argv[1]) as f:
         print("#!/bin/sh")
         for line in f:
             print(convert(line))
