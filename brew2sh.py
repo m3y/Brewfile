@@ -1,27 +1,31 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+import argparse
 import sys
 import os
 
 
-def usage():
-    print("\n\t$ ./brew2sh Brewfile | sh\n")
-    sys.exit(1)
+def print_shellscript_for_brew_bundle(brewfilename):
+    with open(brewfilename) as f:
+        print("#!/bin/sh")
+        for line in f:
+            if line[0] == "#" or len(line) == 1:
+                print(line.rstrip())
+            else:
+                print("brew %s || true" % line.rstrip())
 
 
-def convert(line):
-    if line[0] == "#" or len(line) == 1:
-        return line.rstrip()
-    else:
-        return "brew %s || true" % line.rstrip()
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("brewfile")
+    args = parser.parse_args()
+    if not os.path.isfile(args.brewfile):
+        print("%s is not a file" % args.brewfile)
+        sys.exit(1)
+
+    print_shellscript_for_brew_bundle(args.brewfile)
 
 
 if __name__ == '__main__':
-    if len(sys.argv) < 2 or not os.path.isfile(sys.argv[1]):
-        usage()
-
-    with open(sys.argv[1]) as f:
-        print("#!/bin/sh")
-        for line in f:
-            print(convert(line))
+    main()

@@ -27,6 +27,8 @@ install bash
 install vim
 install --vim-powerline ricty
 
+install python3
+
 # brew cask
 #-----------
 cask install atom
