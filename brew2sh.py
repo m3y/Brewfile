@@ -6,7 +6,7 @@ import os
 
 
 def usage():
-    print("\n$ ./brew2sh Brewfile | sh\n")
+    print("\n\t$ ./brew2sh Brewfile | sh\n")
     sys.exit(1)
 
 
