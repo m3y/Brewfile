@@ -21,6 +21,7 @@ install fontforge
 install tmux
 install ctags
 install curl
+install openssl
 install jq
 install gnu-sed
 install bash
