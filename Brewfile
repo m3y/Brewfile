@@ -29,6 +29,10 @@ install vim
 install --vim-powerline ricty
 
 install python3
+install ghc
+install cabal-install
+install go
+install ansible
 
 # brew cask
 #-----------
@@ -39,14 +43,16 @@ cask install evernote
 cask install google-chrome
 cask install google-japanese-ime
 cask install iterm2
+cask install macvim
 cask install skitch
 cask install xtrafinder
 cask install virtualbox
 cask install vagrant
+cask install boot2docker
+cask install karabiner
 
 #cask install xquartz
 #cask install android-studio
-#cask install karabiner
 #cask install gimp
 #cask install inkscape
 
